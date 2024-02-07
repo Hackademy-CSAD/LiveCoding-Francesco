@@ -76,7 +76,6 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     position: absolute;
     width: 100%;
     height: 50%;
-    z-index:2;
     color: var(--Viola);
     display:flex;
     justify-content:center;
@@ -116,3 +115,32 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     background-color: var(--Viola);
     margin: 10px;
 } 
+
+/* Sezione Card */
+
+.card-custom {
+    position: relative;
+    width: 272px;
+    height: 400px;
+}
+
+.img-card {
+    height: 400px;
+    width: 272px;
+}
+
+.card-custom::after{
+    content: '';
+    height: 400px;
+    width: 272px;
+    background: linear-gradient(rgba(202, 188, 35, 0.2) ,rgba(26,26,26,1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 1s;
+    opacity: 0;
+}
+
+.card-custom:hover:after{
+    opacity: 1;
+}
