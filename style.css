@@ -9,8 +9,6 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
     font-family:'Electrolize', sans-serif;
 }
 
-
-
 :root{
     --Nero:rgb(26,26,26);
     --Viola: rgb(234, 37, 194);
@@ -37,35 +35,49 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
  width:100%;
  height:100px;
  background: var(--Nero);
+ border-bottom: 2px solid var(--Viola);
 }
 
 .sizelogo {
-    height:100px;
+    height:85px;
     width: 150px;
-    margin-top: 25px;
+    margin-top: 10px;
 }
 
+.logo {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--Viola);
+  }
+  
 .navbar-collapse{
     background: var(--Nero);
 }
 
 .nav-link:hover{
-    color:aquamarine;
+    color:burlywood;
 }
 
 .dropdown-toggle{
     color: var(--Viola);
 }
 .dropdown:hover{
-    color:aquamarine;
+    color:burlywood;
 }
 
-.bordomarginebottom{
-    margin-bottom: 2px solid var(--Viola);
+.navlink:focus {
+    color: burlywood;
 }
 
 .hoversocial:hover{
-    color: aquamarine;
+    color: burlywood;
 }
 
 /* FINE NAVBAR */
@@ -144,3 +156,92 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 .card-custom:hover:after{
     opacity: 1;
 }
+/* FINE CARD */
+
+
+
+/* VIDEO */
+.videos {
+    position: relative;
+    /* background-color: black; */
+    height: 90vh;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .videos video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  .videos .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .videos .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  /*FINE VIDEO  */
+  
+/* CHI SIAMO */
+  .img-jobs{
+    height: 160px;
+    width: 160px;
+}
+
+/* FOOTER */
+.rowfooter {
+    min-height: 60vh;
+}
+
+.rowbord {
+    border-top: 2px solid var(--Viola);
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .sizelogo {
+        height:43px;
+        width: 75px;
+    }
+    .navbar-toggler{
+        color:var(--Viola);
+        background-color: white;
+    }
+
+    .videos {
+        background: url('./MEDIA/videomobile.jpeg') black no-repeat center center scroll;
+      }
+    
+      .videos video {
+        display: none;
+      }
+
+      .chisiamobioresp {
+        margin-left: 15px;
+      }
+
+    .rowbord {
+    border-top: 2px solid var(--Viola);
+    }
+  }
